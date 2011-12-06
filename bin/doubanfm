@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+$KCODE="u" if RUBY_VERSION =~ /^1.8/
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+
+require 'douban_fm'
+DoubanFm::Cli.new(ARGV).run
+
